@@ -48,6 +48,8 @@ def merge_data(keys, data)
   #           big_hash.each do |name, info|
   #             if name ==
 
+  data.values 
+
 end
 
 def find_cool(cool)
