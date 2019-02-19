@@ -41,8 +41,9 @@ def merge_data(keys, data)
   keys.each do |hash|
     name = hash[:first_name]
     puts hash
-    otherObject = data[0][name]
-    otherObject.each do |description,value|
+    data_hash = data[0][name]
+    
+    data_hash.each do |description,value|
       hash[description] = value
     end
   end
@@ -63,7 +64,11 @@ def find_cool(cool)
 end
 
 def organize_schools(schools)
-  counts = arr.group_by{|name|name[:name]}.map{|name,num|[name,num.count]}
-
-  locations = schools.group_by{}
+  final_hash = {}
+  schools.each do |school, location_hash|
+    location = location_hash.values 
+    final_hash[location] = []
+    final_hash[location] << school
+  end
+  final_hash  
 end
