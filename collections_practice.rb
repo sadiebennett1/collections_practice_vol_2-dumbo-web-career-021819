@@ -42,7 +42,7 @@ def merge_data(keys, data)
     name = hash[:first_name]
     puts hash
     data_hash = data[0][name]
-    
+
     data_hash.each do |description,value|
       hash[description] = value
     end
@@ -66,7 +66,7 @@ end
 def organize_schools(schools)
   final_hash = {}
   schools.each do |school, location_hash|
-    location = location_hash.values 
+    location = location_hash.values
     final_hash[location] = []
     final_hash[location] << school
   end
