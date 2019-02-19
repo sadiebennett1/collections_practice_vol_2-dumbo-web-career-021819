@@ -73,5 +73,5 @@ def organize_schools(schools)
         final_hash[location] = [school]
       end
   end
-  final_hash  
+  final_hash
 end
