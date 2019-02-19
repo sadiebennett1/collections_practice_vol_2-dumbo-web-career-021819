@@ -66,7 +66,7 @@ end
 def organize_schools(schools)
   final_hash = {}
   schools.each do |school, location_hash|
-    location = location_hash.values
+    location = location_hash.values[0]
       if final_hash.keys.include?(location)
         final_hash[location] << school
       else
