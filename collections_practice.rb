@@ -67,8 +67,11 @@ def organize_schools(schools)
   final_hash = {}
   schools.each do |school, location_hash|
     location = location_hash.values
-    final_hash[location] = []
-    final_hash[location] << school
+      if final_hash.keys.include?(location)
+        final_hash[location] << school
+      else
+        final_hash[location] = [school]
+      end
   end
   final_hash  
 end
