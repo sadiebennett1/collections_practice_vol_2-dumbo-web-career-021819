@@ -38,19 +38,16 @@ end
 
 
 def merge_data(keys, data)
-  # final_hash = {}
-  # keys.each do |large_arr|
-  #   large_arr.each do |small_hash|
-  #     small_hash.each do |title, descript|
-  #
-  #       data.each do |big_arr|
-  #         big_arr.each do |big_hash|
-  #           big_hash.each do |name, info|
-  #             if name ==
-
-  data.values 
-
+  keys.each do |hash|
+    name = hash[:first_name]
+    puts hash
+    otherObject = data[0][name]
+    otherObject.each do |description,value|
+      hash[description] = value
+    end
+  end
 end
+
 
 def find_cool(cool)
   final_hash = {}
